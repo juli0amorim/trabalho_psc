@@ -1,0 +1,5 @@
+Drake;111.222.333-44;12/12/1212;drakexx@gmail.com
+Dinheiro;1000.0
+Dinheiro;500.0
+Roupa;Blusa de Frio;GG
+END_DONATIONS

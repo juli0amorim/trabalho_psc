@@ -1,0 +1,47 @@
+@startuml DGCPSC
+class Doador {
+  - nome: String
+  - cpf: String
+  - dataNascimento: Date 
+  - email: String
+  + doar(): Doacoes[]
+}
+
+class Doacoes {
+  - idDoacao: Varchar
+  - dataDoacao: Date
+  - doador: Doador
+  + registrarDoacao(): void
+}
+
+class Roupa {
+  - tipo: String
+  - tamanho: String
+  + doar(): void
+}
+
+class Dinheiro {
+  - valor: Double
+  + doar(): void
+}
+
+class Alimento {
+  - tipo: String
+  - validade: Date
+  + doar(): void
+}
+
+class Instituto {
+  - idInstituto: Varchar
+  - nome: String
+  - cnpj: String
+  - endereco: String
+  - telefone: String
+  + receberDoacao(): void
+}
+
+Doador "1" -- "0..*" Doacoes
+Doacoes -- Roupa
+Doacoes -- Dinheiro
+Doacoes -- Alimento
+Instituto "1..*" -- "1..*" Doacoes
